@@ -1,31 +1,33 @@
 import React from 'react';
 import "./StarBorder.css";
 
-type StarBorderProps = {
-  as?: React.ElementType;
+type StarBorderProps<T extends React.ElementType> = {
+  as?: T;
   className?: string;
   color?: string;
   speed?: string;
   thickness?: number;
   children: React.ReactNode;
-  [key: string]: any;
-};
+} & Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'className' | 'color' | 'speed' | 'thickness' | 'children'>;
 
-const StarBorder = ({
-  as: Component = "button",
-  className = "",
-  color = "white",
-  speed = "6s",
-  thickness = 1,
-  children,
-  ...rest
-}: StarBorderProps) => {
+const StarBorder = <T extends React.ElementType = 'button'>(
+  {
+    as,
+    className = "",
+    color = "white",
+    speed = "6s",
+    thickness = 1,
+    children,
+    ...rest
+  }: StarBorderProps<T>
+) => {
+  const Component = as || 'button';
   return (
     <Component 
       className={`star-border-container ${className}`} 
       style={{
         padding: `${thickness}px 0`,
-        ...rest.style
+        ...(rest as any).style
       }}
       {...rest}
     >
