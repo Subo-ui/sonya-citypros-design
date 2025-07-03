@@ -10,7 +10,7 @@ export default function AboutPage() {
         />
         <div>
           <p className="mb-4 text-lg font-medium">Sonya Kunii is a dedicated REALTOR® serving buyers and sellers across the Greater Chicago area. Known for her responsiveness, market expertise, and commitment to client success, Sonya brings a personal touch and deep local knowledge to every transaction.</p>
-          <p className="mb-2">Whether you're searching for your dream home or selling a cherished property, Sonya's professionalism and attention to detail ensure a smooth, rewarding experience. She is proud to be part of <span className="font-semibold text-primary">HomeSmart Connect Real Estate</span>, a leader in Chicago real estate.</p>
+          <p className="mb-2">Whether you&apos;re searching for your dream home or selling a cherished property, Sonya&apos;s professionalism and attention to detail ensure a smooth, rewarding experience. She is proud to be part of <span className="font-semibold text-primary">HomeSmart Connect Real Estate</span>, a leader in Chicago real estate.</p>
         </div>
       </div>
       <div className="bg-gray-50 rounded-lg p-6 mb-6">

@@ -33,7 +33,7 @@ export default function TestimonialsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {testimonials.map((t) => (
           <div key={t.id} className="bg-white rounded-lg shadow p-6 flex flex-col gap-2">
-            <div className="text-lg italic text-gray-700">"{t.quote}"</div>
+            <div className="text-lg italic text-gray-700">&quot;{t.quote}&quot;</div>
             <div className="text-sm text-primary font-semibold mt-2">{t.client}</div>
           </div>
         ))}
