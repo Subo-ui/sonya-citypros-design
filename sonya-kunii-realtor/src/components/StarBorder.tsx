@@ -22,14 +22,15 @@ const StarBorder = <T extends React.ElementType = 'button'>(
   }: StarBorderProps<T>
 ) => {
   const Component = as || 'button';
+  const { style, ...restProps } = rest || {};
   return (
     <Component 
       className={`star-border-container ${className}`} 
       style={{
         padding: `${thickness}px 0`,
-        ...(rest as any).style
+        ...(style || {})
       }}
-      {...rest}
+      {...restProps}
     >
       <div
         className="border-gradient-bottom"
